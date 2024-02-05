@@ -1,0 +1,10 @@
+exampleObjectWithJustIntElements {
+    100
+    42
+}
+
+exampleObjectWithMixedElements {
+    "Bird Breeder Conference"
+    (200 + 23)
+    exampleObjectWithJustIntElements
+}

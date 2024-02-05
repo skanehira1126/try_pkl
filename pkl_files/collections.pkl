@@ -1,0 +1,15 @@
+// 配列
+birds {
+    "Pigeon"
+    "Parrot"
+    "Barn owl"
+    "Falcon"
+}
+
+// 辞書
+habitats {
+    ["Pigeon"] = "Streets"
+    ["Parrot"] = "Parks"
+    ["Barn owl"] = "Forests"
+    ["Falcon"] = "Mountains"
+}

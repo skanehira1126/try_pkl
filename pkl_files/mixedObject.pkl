@@ -1,0 +1,12 @@
+mixedObject {
+    name = "Pigeon"
+    lifespan = 8
+    "wing"
+    "claw"
+    ["wing"] = "Not related to the _element_ \"wing\""
+    42
+    extinct = false
+    [false] {
+        description = "Construed object example"
+    }
+}

@@ -1,0 +1,8 @@
+birds {
+    "Pigeon"
+    "Parrot"
+    "Barn owl"
+    "Falcon"
+}
+
+relatedToSnowOwl = birds[2]
