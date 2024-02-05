@@ -1,0 +1,24 @@
+module acmecicd
+
+class Pipeline {
+    name: String(nameRequiresBranchName)?
+
+    // branchNameが設定されていない場合にエラー
+    hidden nameRequiresBranchName = (_) ->
+        if (branchName == null)
+            thrhow("Pipelines that set ad 'name' must also set a 'branchName'.")
+        else true
+
+    branchName: String?
+}
+
+// ここから下がProperty
+// timeoutは整数で3以上
+timeout: Int(this >= 3)
+
+pipelines: Listing<Pipeline>
+
+// 出力に関する設定
+output {
+    renderer = new YamlRenderer {}
+}

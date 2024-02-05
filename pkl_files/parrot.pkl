@@ -1,0 +1,10 @@
+import "modules/pigeon.pkl"
+
+// importで利用すると直接要素を追加できない
+parrot = (pigeon) {
+    name = "Great green macaw"
+    diet = "Berries"
+    taxonomy {
+        species = "Ara ambiguus"
+    }
+}

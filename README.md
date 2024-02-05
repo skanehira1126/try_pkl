@@ -190,3 +190,71 @@ $ pkl eval pkl_files/indexedListing.pkl -f json
 }
 ```
 
+### 設定の操作
+
+#### 修正
+```bash
+# amendingObjects.pkl
+$ pkl eval -f json pkl_files/amendingObjects.pkl
+{
+  "bird": {
+    "name": "Pigeon",
+    "diet": "Seeds",
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "clade": "Dinosauria",
+      "order": "Columbiformes"
+    }
+  },
+  "parrot": {
+    "name": "Parrow",
+    "diet": "Beries",
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "clade": "Dinosauria",
+      "order": "Psittaciformes"
+    }
+  }
+}
+```
+
+parrotで再定義した部分だけbardから変更されている.
+- name
+- diet
+- taxonomy.order
+
+修正で出来上がるのは新しいオブジェクトで修正対象のオブジェクトに属性の追加はできない.  
+あくまでオブジェクトはimutable
+
+修正して出来上がったオブジェクトは新しいオブジェクトなので、ネストもできる.
+
+entryを含む場合でも修正できる.
+ただし、entryに対しては**追加**になる
+
+```bash
+# amendElementsAndEntries.pklを作成
+$ pkl eval pkl_files/amendElementsAndEntries.pkl
+favoriteFoods {
+  ["Barn owl"] {
+    "mice"
+  }
+  "red berries"
+  "blue berries"
+}
+adultBirdFoods {
+  ["Barn owl"] {
+    "mice"
+    "fish"
+  }
+  "red berries"
+  "pebbles"
+  ["Falcon"] {
+    "insects"
+    "amphibians"
+  }
+  "worms"
+}
+```
+
+修正する場合はindexで指定する.`[1] = xxx`の部分
+

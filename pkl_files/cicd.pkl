@@ -1,0 +1,11 @@
+amends "modules/acmecicd.pkl"
+
+// acmecicd.pklでtimeoutは3以上を制限しているのでエラー
+// timeout = 1
+timeout = 3
+pipelines {
+    new {
+        name = "prb"
+        branchName = "main"  // branchNameがないとエラー
+    }
+}

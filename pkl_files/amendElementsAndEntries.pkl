@@ -1,0 +1,19 @@
+favoriteFoods {
+    "red berries"
+    "blue berries"
+    ["Barn owl"] {
+        "mice"
+    }
+}
+
+adultBirdFoods = (favoriteFoods) {
+    [1] = "pebbles"  // blue berries -> pebbles
+    "worms"
+    ["Falcon"] {  // Falconを追加
+        "insects"
+        "amphibians"
+    }
+    ["Barn owl"] {
+        "fish"  // Barn owlにfishを追加
+    }
+}
