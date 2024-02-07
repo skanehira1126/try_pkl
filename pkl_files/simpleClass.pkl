@@ -1,0 +1,22 @@
+// String型のkey nameしか受け付けることができない.
+class Language {
+    name: String
+}
+
+// OK
+bestForConfig: Language = new {
+    name = "Pkl"
+}
+
+// NG
+/*
+bestForConfigNg1: Language = new {
+    name = 1
+}
+*/
+/*
+bestForConfigNg2: Language = new {
+    name = "Pkl"
+    is_use = true
+}
+*/

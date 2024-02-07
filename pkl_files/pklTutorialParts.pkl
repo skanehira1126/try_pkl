@@ -1,0 +1,29 @@
+class TutorialPart {
+    name: String
+    part: Int
+    hasExercises: Boolean
+    amountLearned: Float
+    duration: Duration
+    bandwidthRequirementsPerSecond: DataSize
+}
+
+pklTutorialPart1: TutorialPart = new {
+    name = "Basic Configuration"
+    part = 1
+    hasExercises = true
+    amountLearned = 13.37
+    duration = 30.min
+    bandwidthRequirementsPerSecond = 50.mib.toUnit("mb")
+}
+
+pklTutorialPart2: TutorialPart = (pklTutorialPart1) {
+    name = "Filling out a Template"
+    part = 2
+}
+
+pklTutorialPart3: TutorialPart = (pklTutorialPart1) {
+    name = "Writing a Template"
+    part = 3
+}
+
+
